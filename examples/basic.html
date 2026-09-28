@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Holiday Mode basic example</title>
+  </head>
+  <body>
+    <button id="start">Start Holiday Mode</button>
+    <script type="module">
+      import { createHolidayMode } from "../dist/holiday-mode.js";
+
+      let holiday;
+      document.querySelector("#start").addEventListener("click", () => {
+        holiday?.destroy();
+        holiday = createHolidayMode({
+          preset: "chuseok",
+          message: "풍요로운 한가위 보내세요",
+          durationMs: 8000
+        });
+      });
+    </script>
+  </body>
+</html>
