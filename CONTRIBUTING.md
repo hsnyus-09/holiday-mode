@@ -1,13 +1,13 @@
 # Contributing
 
-## 개발
+## Development
 
 ```bash
 npm ci
 npm run dev
 ```
 
-## 제출 전 확인
+## Checks Before Submitting
 
 ```bash
 npx playwright install chromium
@@ -15,11 +15,11 @@ npm run check
 npm run pack:smoke
 ```
 
-## 변경 기준
+## Guidelines for Changes
 
-- `pause()`, `resume()`, `destroy()`나 탭 상태 처리를 바꾸면 해당 테스트도 갱신합니다.
-- 사용자 문구는 HTML 대신 `textContent`로 넣습니다.
-- 새 프리셋이나 효과를 추가하면 타입, 입력 검사, 데모, README를 함께 갱신합니다.
-- 동작 줄이기 설정과 키보드 접근성을 유지합니다.
+- If you change `pause()`, `resume()`, `destroy()`, or tab state handling, update the relevant tests as well.
+- Insert user-facing text with `textContent` instead of HTML.
+- When adding a preset or effect, update the types, input validation, demo, and README together.
+- Preserve reduced-motion settings and keyboard accessibility.
 
-변경 범위와 실행한 테스트를 PR에 적어 주세요. 동작이 바뀌면 테스트와 문서도 함께 수정합니다.
+Please describe the scope of your changes and the tests you ran in the PR. If behavior changes, update the tests and documentation as well.

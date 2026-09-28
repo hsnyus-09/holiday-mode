@@ -1,11 +1,11 @@
 # Security Policy
 
-## 취약점 보고
+## Reporting a Vulnerability
 
-재현 방법과 영향 범위를 정리해 관리자에게 비공개로 알려 주세요. 비공개 연락 경로가 없으면 공개 이슈에는 영향 범위와 연락 방법만 남겨 주세요. 악용 가능한 입력이나 공격 코드는 공개하지 마세요.
+Privately notify the maintainers with reproduction steps and the impact scope. If there is no private contact channel, include only the impact scope and a way to contact you in a public issue. Do not disclose exploitable inputs or attack code publicly.
 
-## DOM 렌더링
+## DOM Rendering
 
-사용자 문구는 `textContent`로 렌더링합니다. 새 효과를 추가할 때도 사용자 입력을 HTML로 삽입하지 마세요. 색상 입력 검사와 `destroy()`의 DOM·타이머·리스너 정리를 유지해야 합니다.
+Render user-provided messages with `textContent`. Do not insert user input as HTML when adding new effects. Preserve color input validation and cleanup of the DOM, timers, and listeners in `destroy()`.
 
-라이브러리와 데모는 서버 저장소, 계정, 분석 스크립트, 로컬 저장소를 사용하지 않습니다.
+The library and demo do not use server-side storage, accounts, analytics scripts, or local storage.
